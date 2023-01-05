@@ -1,7 +1,7 @@
 local https = game:GetService("HttpService")
 local Einstellungen = require(script.Parent.Einstellungen)
 local Event = game:GetService("ReplicatedStorage"):WaitForChild("Ticket Events").Senden
-local url = "https://discord.com/api/webhooks/1060590190650994779/EFk73kvkXAgE1GCu7BloYf88lf05cME13IrtN49OAFJFXD0FR8KTT3gwmXQpMUx2dW4O"
+local Link = "https://discord.com/api/webhooks/1060590190650994779/EFk73kvkXAgE1GCu7BloYf88lf05cME13IrtN49OAFJFXD0FR8KTT3gwmXQpMUx2dW4O"
 
 
 local function createMessage(url, message : string)
@@ -92,7 +92,7 @@ Event.OnServerEvent:Connect(function(player, Art, Spieler, Grund)
 
 	if Art == "SENDEN" then
 
-		createEmbed(url, "TICKET", "**[SPIELER]** :  "..player.Name.."\n**[GEMELDET]** :  "..Spieler.."\n**[GRUND]** :  "..Grund)
+		createEmbed(Link, "TICKET", "**[SPIELER]** :  "..player.Name.."\n**[GEMELDET]** :  "..Spieler.."\n**[GRUND]** :  "..Grund)
 
 	end
 
